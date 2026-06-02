@@ -1,0 +1,66 @@
+.view-toolbar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 18px 0 28px;
+  padding: 0 50px 0 0;
+}
+
+.view-toolbar > span {
+  position: relative;
+  color: #9b9b9b;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.view-switch {
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+  min-width: 110px;
+  margin-left: auto;
+}
+
+.view-switch button {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  background: transparent;
+  color: #c1c1c1;
+  cursor: pointer;
+}
+
+.view-switch button.active {
+  color: #1783db;
+}
+
+@media (max-width: 760px) {
+  .view-toolbar {
+    margin: 31px 0 15px;
+    padding: 0;
+  }
+
+  .view-toolbar > span {
+    font-size: 18px;
+  }
+
+  .view-switch {
+    gap: 16px;
+    min-width: 0;
+  }
+
+  .view-switch button {
+    width: 28px;
+    height: 28px;
+  }
+
+  .view-switch svg {
+    width: 18px;
+    height: 18px;
+  }
+}

@@ -1,0 +1,286 @@
+.post-feed {
+  position: relative;
+  top: 40px;
+  left: 50px;
+  z-index: 2;
+  width: min(100%, 1218px);
+  margin: 0 auto;
+}
+
+.post-feed.rows {
+  display: grid;
+  gap: 8px;
+  width: min(100%, 1210px);
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.post-feed.tiles {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(210px, 1fr));
+  gap: 44px 14px;
+  margin-bottom: 100px;
+}
+
+.post-card {
+  min-width: 0;
+  background: #fff;
+}
+
+.empty-posts {
+  margin: 80px auto 120px;
+  color: #555;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.rows .post-card {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  min-height: 135px;
+  padding: 0 26px 0 0;
+}
+
+.tiles .post-card {
+  display: grid;
+  grid-template-rows: auto minmax(116px, auto);
+  gap: 22px;
+}
+
+.post-media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  background: #c6c6c6;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.post-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-media svg {
+  position: relative;
+  z-index: 1;
+}
+
+.rows .post-media {
+  width: 126px;
+  aspect-ratio: 1;
+}
+
+.tiles .post-media {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  gap: 56px;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.tiles .post-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 54px 44px;
+  padding-inline: 1px;
+  font-size: 20px;
+}
+
+.post-column {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 0;
+}
+
+.rows .post-column {
+  flex: 0 1 260px;
+}
+
+.rows .post-column-middle {
+  align-items: flex-start;
+}
+
+.rows .post-column-end {
+  align-items: flex-start;
+}
+
+.post-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.metric-line {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.metric-line span {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+}
+
+.metric-line svg {
+  width: 32px;
+  height: 32px;
+}
+
+.post-column time,
+.post-column span {
+  white-space: nowrap;
+}
+
+.tiles .post-column-end {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-self: stretch;
+  font-size: 18px;
+}
+
+.tiles .post-column-end time {
+  justify-self: end;
+}
+
+.tiles .post-column {
+  gap: 22px;
+}
+
+.tiles .post-title {
+  font-size: 24px;
+}
+
+.tiles .metric-line {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.tiles .metric-line svg {
+  width: 36px;
+  height: 36px;
+}
+
+@media (max-width: 1350px) {
+  .post-feed.tiles {
+    grid-template-columns: repeat(2, minmax(210px, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .post-feed {
+    left: 10px;
+    width: calc(100% - 20px);
+    margin: 0;
+  }
+
+  .post-feed.tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 10px;
+  }
+
+  .tiles .post-media {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .tiles .post-card {
+    grid-template-rows: auto minmax(120px, auto);
+    width: 100%;
+  }
+
+  .tiles .post-meta {
+    gap: 14px 16px;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .tiles .post-title {
+    font-size: 13px;
+  }
+
+  .tiles .post-column {
+    gap: 8px;
+  }
+
+  .tiles .metric-line {
+    gap: 8px;
+  }
+
+  .tiles .metric-line svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .tiles .post-column-end {
+    font-size: 12px;
+  }
+
+  .post-feed.rows {
+    width: 100%;
+    min-width: 0;
+    margin-inline: auto;
+  }
+
+  .rows .post-card {
+    display: flex;
+    gap: 12px;
+    min-height: 74px;
+    padding-right: 0;
+  }
+
+  .rows .post-media {
+    width: 62px;
+  }
+
+  .rows .post-meta {
+    gap: 8px 12px;
+    font-size: 10px;
+  }
+
+  .post-title {
+    font-size: 12px;
+  }
+
+  .metric-line svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .metric-line {
+    gap: 15px;
+  }
+
+  .metric-line span {
+    gap: 4px;
+  }
+
+  .rows .post-column {
+    gap: 5px;
+  }
+
+  .rows .post-column-end {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 1fr;
+    justify-self: stretch;
+  }
+}

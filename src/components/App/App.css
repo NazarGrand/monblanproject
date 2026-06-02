@@ -1,0 +1,64 @@
+.page-shell {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #e6e6e6;
+}
+
+.profile {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1726px);
+  min-height: 780px;
+  margin: 0 auto;
+  background: #fff;
+  overflow: hidden;
+}
+
+.load-more {
+  display: block;
+  width: 148px;
+  height: 34px;
+  margin: 44px auto 60px;
+  border: 1px solid #929292;
+  border-radius: 14px;
+  background: #fff;
+  color: #929292;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.art-left {
+  display: none;
+}
+
+.art-right {
+  position: absolute;
+  pointer-events: none;
+  right: -36px;
+  bottom: 42px;
+  width: 185px;
+  height: 184px;
+  background: linear-gradient(151deg, #59a779 4%, #123f4d 100%);
+  clip-path: path(
+    'M108,2 C140,5 125,70 157,73 C185,76 194,108 168,134 C130,171 66,167 39,130 C18,102 34,75 13,51 C-9,25 42,-2 68,18 C87,34 83,0 108,2 Z'
+  );
+}
+
+@media (max-width: 760px) {
+  .profile {
+    min-height: auto;
+    background: #fff;
+  }
+}
+
+@media (max-width: 460px) {
+  .art-left {
+    width: 88vw;
+    height: 240px;
+  }
+
+  .art-right {
+    opacity: 0.7;
+  }
+}
